@@ -1,3 +1,4 @@
-[submodule "src/cantools"]
-	path = src/cantools
+
+[submodule "ros2_ws/src/cantools"]
+	path = ros2_ws/src/cantools
 	url = git@github.com:rimakoe/cantools.git

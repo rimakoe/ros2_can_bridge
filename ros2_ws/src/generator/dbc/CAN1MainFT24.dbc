@@ -1,0 +1,1721 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Jetson SSU TTS_RL TTS_RR TTS_FR TTS_FL Shunt AMS ABX SDCL PDU PDMV XSens STW EPSC
+
+
+BO_ 226 JetsonCommands: 8 Jetson
+ SG_ Jetson_Steering_Angle_Left : 24|8@1- (0.00784313725490196,0) [-1|1] "" Vector__XXX
+ SG_ Jetson_Steering_Angle_Right : 32|8@1- (0.00784313725490196,0) [-1|1] "" Vector__XXX
+ SG_ Jetson_Speed_Target_right : 16|8@1+ (1,0) [0|51] "m/s" Vector__XXX
+ SG_ Jetson_Speed_Target_left : 8|8@1+ (0.2,0) [0|51] "" Vector__XXX
+ SG_ Jetson_Brake_Ratio : 0|8@1+ (0.00392156862745098,0) [0|1] "" Vector__XXX
+
+BO_ 225 JetsonTX: 7 Jetson
+ SG_ Jetson_Cones_Actual : 16|8@1+ (1,0) [0|255] ""  ABX
+ SG_ Jetson_Cones_All : 8|8@1+ (1,0) [0|255] ""  ABX
+ SG_ Jetson_Lap_Count : 4|4@1+ (1,0) [0|15] ""  ABX
+ SG_ Jetson_AS_OK : 1|1@1+ (1,0) [0|1] "Bool"  ABX
+ SG_ Jetson_AS_Mission_Complete : 0|1@1+ (1,0) [0|1] "Bool"  ABX
+
+BO_ 1536 AMS_Slave0_Log0: 8 AMS
+ SG_ AMS_Slave0_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1537 AMS_Slave0_Log1: 8 AMS
+ SG_ AMS_Slave0_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1538 AMS_Slave0_Log2: 8 AMS
+ SG_ AMS_Slave0_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1539 AMS_Slave0_Log3: 8 AMS
+ SG_ AMS_Slave0_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave0_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1540 AMS_Slave0_Log4: 6 AMS
+ SG_ AMS_Slave0_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave0_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1541 AMS_Slave0_Log5: 8 AMS
+ SG_ AMS_Slave0_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1542 AMS_Slave0_Log6: 8 AMS
+ SG_ AMS_Slave0_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1543 AMS_Slave0_Log7: 8 AMS
+ SG_ AMS_Slave0_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1544 AMS_Slave0_Log8: 8 AMS
+ SG_ AMS_Slave0_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave0_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1552 AMS_Slave1_Log0: 8 AMS
+ SG_ AMS_Slave1_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1553 AMS_Slave1_Log1: 8 AMS
+ SG_ AMS_Slave1_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1554 AMS_Slave1_Log2: 8 AMS
+ SG_ AMS_Slave1_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1555 AMS_Slave1_Log3: 8 AMS
+ SG_ AMS_Slave1_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave1_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1556 AMS_Slave1_Log4: 6 AMS
+ SG_ AMS_Slave1_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave1_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1557 AMS_Slave1_Log5: 8 AMS
+ SG_ AMS_Slave1_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1558 AMS_Slave1_Log6: 8 AMS
+ SG_ AMS_Slave1_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1559 AMS_Slave1_Log7: 8 AMS
+ SG_ AMS_Slave1_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1560 AMS_Slave1_Log8: 8 AMS
+ SG_ AMS_Slave1_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave1_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1568 AMS_Slave2_Log0: 8 AMS
+ SG_ AMS_Slave2_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1569 AMS_Slave2_Log1: 8 AMS
+ SG_ AMS_Slave2_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1570 AMS_Slave2_Log2: 8 AMS
+ SG_ AMS_Slave2_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1571 AMS_Slave2_Log3: 8 AMS
+ SG_ AMS_Slave2_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave2_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1572 AMS_Slave2_Log4: 6 AMS
+ SG_ AMS_Slave2_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave2_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1573 AMS_Slave2_Log5: 8 AMS
+ SG_ AMS_Slave2_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1574 AMS_Slave2_Log6: 8 AMS
+ SG_ AMS_Slave2_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1575 AMS_Slave2_Log7: 8 AMS
+ SG_ AMS_Slave2_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1576 AMS_Slave2_Log8: 8 AMS
+ SG_ AMS_Slave2_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave2_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1584 AMS_Slave3_Log0: 8 AMS
+ SG_ AMS_Slave3_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1585 AMS_Slave3_Log1: 8 AMS
+ SG_ AMS_Slave3_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1586 AMS_Slave3_Log2: 8 AMS
+ SG_ AMS_Slave3_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1587 AMS_Slave3_Log3: 8 AMS
+ SG_ AMS_Slave3_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave3_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1588 AMS_Slave3_Log4: 6 AMS
+ SG_ AMS_Slave3_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave3_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1589 AMS_Slave3_Log5: 8 AMS
+ SG_ AMS_Slave3_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1590 AMS_Slave3_Log6: 8 AMS
+ SG_ AMS_Slave3_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1591 AMS_Slave3_Log7: 8 AMS
+ SG_ AMS_Slave3_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1592 AMS_Slave3_Log8: 8 AMS
+ SG_ AMS_Slave3_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave3_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1600 AMS_Slave4_Log0: 8 AMS
+ SG_ AMS_Slave4_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1601 AMS_Slave4_Log1: 8 AMS
+ SG_ AMS_Slave4_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1602 AMS_Slave4_Log2: 8 AMS
+ SG_ AMS_Slave4_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1603 AMS_Slave4_Log3: 8 AMS
+ SG_ AMS_Slave4_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave4_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1604 AMS_Slave4_Log4: 6 AMS
+ SG_ AMS_Slave4_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave4_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1605 AMS_Slave4_Log5: 8 AMS
+ SG_ AMS_Slave4_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1606 AMS_Slave4_Log6: 8 AMS
+ SG_ AMS_Slave4_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1607 AMS_Slave4_Log7: 8 AMS
+ SG_ AMS_Slave4_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1608 AMS_Slave4_Log8: 8 AMS
+ SG_ AMS_Slave4_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave4_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1616 AMS_Slave5_Log0: 8 AMS
+ SG_ AMS_Slave5_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1617 AMS_Slave5_Log1: 8 AMS
+ SG_ AMS_Slave5_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1618 AMS_Slave5_Log2: 8 AMS
+ SG_ AMS_Slave5_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1619 AMS_Slave5_Log3: 8 AMS
+ SG_ AMS_Slave5_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave5_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1620 AMS_Slave5_Log4: 6 AMS
+ SG_ AMS_Slave5_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave5_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1621 AMS_Slave5_Log5: 8 AMS
+ SG_ AMS_Slave5_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1622 AMS_Slave5_Log6: 8 AMS
+ SG_ AMS_Slave5_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1623 AMS_Slave5_Log7: 8 AMS
+ SG_ AMS_Slave5_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1624 AMS_Slave5_Log8: 8 AMS
+ SG_ AMS_Slave5_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave5_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1632 AMS_Slave6_Log0: 8 AMS
+ SG_ AMS_Slave6_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1633 AMS_Slave6_Log1: 8 AMS
+ SG_ AMS_Slave6_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1634 AMS_Slave6_Log2: 8 AMS
+ SG_ AMS_Slave6_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1635 AMS_Slave6_Log3: 8 AMS
+ SG_ AMS_Slave6_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave6_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1636 AMS_Slave6_Log4: 6 AMS
+ SG_ AMS_Slave6_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave6_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1637 AMS_Slave6_Log5: 8 AMS
+ SG_ AMS_Slave6_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1638 AMS_Slave6_Log6: 8 AMS
+ SG_ AMS_Slave6_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1639 AMS_Slave6_Log7: 8 AMS
+ SG_ AMS_Slave6_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1640 AMS_Slave6_Log8: 8 AMS
+ SG_ AMS_Slave6_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave6_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1648 AMS_Slave7_Log0: 8 AMS
+ SG_ AMS_Slave7_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1649 AMS_Slave7_Log1: 8 AMS
+ SG_ AMS_Slave7_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1650 AMS_Slave7_Log2: 8 AMS
+ SG_ AMS_Slave7_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1651 AMS_Slave7_Log3: 8 AMS
+ SG_ AMS_Slave7_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave7_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1652 AMS_Slave7_Log4: 6 AMS
+ SG_ AMS_Slave7_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave7_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1653 AMS_Slave7_Log5: 8 AMS
+ SG_ AMS_Slave7_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1654 AMS_Slave7_Log6: 8 AMS
+ SG_ AMS_Slave7_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1655 AMS_Slave7_Log7: 8 AMS
+ SG_ AMS_Slave7_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1656 AMS_Slave7_Log8: 8 AMS
+ SG_ AMS_Slave7_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave7_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1664 AMS_Slave8_Log0: 8 AMS
+ SG_ AMS_Slave8_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1665 AMS_Slave8_Log1: 8 AMS
+ SG_ AMS_Slave8_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1666 AMS_Slave8_Log2: 8 AMS
+ SG_ AMS_Slave8_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1667 AMS_Slave8_Log3: 8 AMS
+ SG_ AMS_Slave8_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave8_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1668 AMS_Slave8_Log4: 6 AMS
+ SG_ AMS_Slave8_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave8_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1669 AMS_Slave8_Log5: 8 AMS
+ SG_ AMS_Slave8_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1670 AMS_Slave8_Log6: 8 AMS
+ SG_ AMS_Slave8_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1671 AMS_Slave8_Log7: 8 AMS
+ SG_ AMS_Slave8_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1672 AMS_Slave8_Log8: 8 AMS
+ SG_ AMS_Slave8_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave8_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1680 AMS_Slave9_Log0: 8 AMS
+ SG_ AMS_Slave9_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1681 AMS_Slave9_Log1: 8 AMS
+ SG_ AMS_Slave9_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1682 AMS_Slave9_Log2: 8 AMS
+ SG_ AMS_Slave9_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1683 AMS_Slave9_Log3: 8 AMS
+ SG_ AMS_Slave9_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave9_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1684 AMS_Slave9_Log4: 6 AMS
+ SG_ AMS_Slave9_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave9_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1685 AMS_Slave9_Log5: 8 AMS
+ SG_ AMS_Slave9_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1686 AMS_Slave9_Log6: 8 AMS
+ SG_ AMS_Slave9_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1687 AMS_Slave9_Log7: 8 AMS
+ SG_ AMS_Slave9_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1688 AMS_Slave9_Log8: 8 AMS
+ SG_ AMS_Slave9_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave9_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1696 AMS_Slave10_Log0: 8 AMS
+ SG_ AMS_Slave10_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1697 AMS_Slave10_Log1: 8 AMS
+ SG_ AMS_Slave10_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1698 AMS_Slave10_Log2: 8 AMS
+ SG_ AMS_Slave10_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1699 AMS_Slave10_Log3: 8 AMS
+ SG_ AMS_Slave10_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave10_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1700 AMS_Slave10_Log4: 6 AMS
+ SG_ AMS_Slave10_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave10_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1701 AMS_Slave10_Log5: 8 AMS
+ SG_ AMS_Slave10_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1702 AMS_Slave10_Log6: 8 AMS
+ SG_ AMS_Slave10_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1703 AMS_Slave10_Log7: 8 AMS
+ SG_ AMS_Slave10_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1704 AMS_Slave10_Log8: 8 AMS
+ SG_ AMS_Slave10_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave10_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1712 AMS_Slave11_Log0: 8 AMS
+ SG_ AMS_Slave11_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1713 AMS_Slave11_Log1: 8 AMS
+ SG_ AMS_Slave11_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1714 AMS_Slave11_Log2: 8 AMS
+ SG_ AMS_Slave11_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1715 AMS_Slave11_Log3: 8 AMS
+ SG_ AMS_Slave11_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave11_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1716 AMS_Slave11_Log4: 6 AMS
+ SG_ AMS_Slave11_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave11_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1717 AMS_Slave11_Log5: 8 AMS
+ SG_ AMS_Slave11_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1718 AMS_Slave11_Log6: 8 AMS
+ SG_ AMS_Slave11_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1719 AMS_Slave11_Log7: 8 AMS
+ SG_ AMS_Slave11_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1720 AMS_Slave11_Log8: 8 AMS
+ SG_ AMS_Slave11_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave11_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1728 AMS_Slave12_Log0: 8 AMS
+ SG_ AMS_Slave12_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1729 AMS_Slave12_Log1: 8 AMS
+ SG_ AMS_Slave12_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1730 AMS_Slave12_Log2: 8 AMS
+ SG_ AMS_Slave12_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1731 AMS_Slave12_Log3: 8 AMS
+ SG_ AMS_Slave12_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave12_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1732 AMS_Slave12_Log4: 6 AMS
+ SG_ AMS_Slave12_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave12_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1733 AMS_Slave12_Log5: 8 AMS
+ SG_ AMS_Slave12_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1734 AMS_Slave12_Log6: 8 AMS
+ SG_ AMS_Slave12_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1735 AMS_Slave12_Log7: 8 AMS
+ SG_ AMS_Slave12_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1736 AMS_Slave12_Log8: 8 AMS
+ SG_ AMS_Slave12_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave12_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1744 AMS_Slave13_Log0: 8 AMS
+ SG_ AMS_Slave13_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1745 AMS_Slave13_Log1: 8 AMS
+ SG_ AMS_Slave13_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1746 AMS_Slave13_Log2: 8 AMS
+ SG_ AMS_Slave13_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1747 AMS_Slave13_Log3: 8 AMS
+ SG_ AMS_Slave13_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave13_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1748 AMS_Slave13_Log4: 6 AMS
+ SG_ AMS_Slave13_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave13_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1749 AMS_Slave13_Log5: 8 AMS
+ SG_ AMS_Slave13_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1750 AMS_Slave13_Log6: 8 AMS
+ SG_ AMS_Slave13_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1751 AMS_Slave13_Log7: 8 AMS
+ SG_ AMS_Slave13_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1752 AMS_Slave13_Log8: 8 AMS
+ SG_ AMS_Slave13_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave13_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1760 AMS_Slave14_Log0: 8 AMS
+ SG_ AMS_Slave14_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1761 AMS_Slave14_Log1: 8 AMS
+ SG_ AMS_Slave14_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1762 AMS_Slave14_Log2: 8 AMS
+ SG_ AMS_Slave14_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1763 AMS_Slave14_Log3: 8 AMS
+ SG_ AMS_Slave14_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave14_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1764 AMS_Slave14_Log4: 6 AMS
+ SG_ AMS_Slave14_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave14_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1765 AMS_Slave14_Log5: 8 AMS
+ SG_ AMS_Slave14_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1766 AMS_Slave14_Log6: 8 AMS
+ SG_ AMS_Slave14_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1767 AMS_Slave14_Log7: 8 AMS
+ SG_ AMS_Slave14_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1768 AMS_Slave14_Log8: 8 AMS
+ SG_ AMS_Slave14_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave14_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1776 AMS_Slave15_Log0: 8 AMS
+ SG_ AMS_Slave15_V3 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V2 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V1 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V0 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1777 AMS_Slave15_Log1: 8 AMS
+ SG_ AMS_Slave15_V7 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V6 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V5 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V4 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1778 AMS_Slave15_Log2: 8 AMS
+ SG_ AMS_Slave15_V11 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V10 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V9 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V8 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1779 AMS_Slave15_Log3: 8 AMS
+ SG_ AMS_Slave15_V15 : 55|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V14 : 39|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V13 : 23|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+ SG_ AMS_Slave15_V12 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1780 AMS_Slave15_Log4: 6 AMS
+ SG_ AMS_Slave15_FailedSensors : 23|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_Slave15_V16 : 7|16@0+ (0.0001,0) [0|6.5535] "V" Vector__XXX
+
+BO_ 1781 AMS_Slave15_Log5: 8 AMS
+ SG_ AMS_Slave15_T7 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T6 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T5 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T4 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T3 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T2 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T1 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T0 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1782 AMS_Slave15_Log6: 8 AMS
+ SG_ AMS_Slave15_T15 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T14 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T13 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T12 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T11 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T10 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T9 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T8 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1783 AMS_Slave15_Log7: 8 AMS
+ SG_ AMS_Slave15_T23 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T22 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T21 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T20 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T19 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T18 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T17 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T16 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 1784 AMS_Slave15_Log8: 8 AMS
+ SG_ AMS_Slave15_T31 : 56|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T30 : 48|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T29 : 40|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T28 : 32|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T27 : 24|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T26 : 16|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T25 : 8|8@1- (1,0) [-128|127] "degC" Vector__XXX
+ SG_ AMS_Slave15_T24 : 0|8@1- (1,0) [-128|127] "degC" Vector__XXX
+
+BO_ 224 JetsonRX: 4 ABX
+ SG_ Jetson_AllowTorque : 24|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Jetson_Reset : 7|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Jetson_Power_Off : 6|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ Jetson_Speed_XSens : 16|8@1+ (0.2,0) [0|51] "m/s" Vector__XXX
+ SG_ Jetson_Speed : 8|8@1+ (0.2,0) [0|51] "m/s"  Jetson
+ SG_ Jetson_AS_State : 3|3@1+ (1,0) [0|5] ""  Jetson
+ SG_ Jetson_AS_Mission : 0|3@1+ (1,0) [0|7] "int"  Jetson
+
+BO_ 143 AMS_Slave15Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 142 AMS_Slave14Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 141 AMS_Slave13Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 140 AMS_Slave12Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 139 AMS_Slave11Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 138 AMS_Slave10Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 137 AMS_Slave9Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 136 AMS_Slave8Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 135 AMS_Slave7Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 134 AMS_Slave6Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 133 AMS_Slave5Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 132 AMS_Slave4Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 131 AMS_Slave3Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 130 AMS_Slave2Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 129 AMS_Slave1Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 265 ABX_Misc: 7 ABX
+ SG_ ABX_LV_Voltage : 48|8@1+ (0.0588235294117647,0) [0|15] "V" Vector__XXX
+ SG_ ABX_LV_SoC : 40|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ ABX_DriverProtocol : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ABX_Distance_total : 24|16@1+ (0.01,0) [0|655.35] "km" Vector__XXX
+ SG_ ABX_Distance_session : 8|16@1+ (1,0) [0|65535] "m" Vector__XXX
+
+BO_ 12 AMS_Error: 2 AMS
+ SG_ AMS_Error_Arg : 8|8@1- (1,0) [0|0] ""  ABX
+ SG_ AMS_Error_Kind : 0|8@1- (1,0) [0|0] ""  ABX
+
+BO_ 264 ABX_CoolingSys_Internal: 8 ABX
+ SG_ ABX_CS_T_MotR : 48|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_T_MotL : 32|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_T_InvR : 16|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_T_InvL : 0|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+
+BO_ 262 ABX_CoolingSys_Acc: 6 ABX
+ SG_ ABX_CS_T_AccOut : 32|10@1+ (0.1,0) [0|102.3] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_T_AccIn : 16|10@1+ (0.1,0) [0|102.3] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_P_AccOut : 8|8@1+ (0.02,0) [0|4] "bar" Vector__XXX
+ SG_ ABX_CS_P_AccIn : 0|8@1+ (0.02,0) [0|4] "bar" Vector__XXX
+
+BO_ 263 ABX_CoolingSys_MotInv: 8 ABX
+ SG_ ABX_CS_P_MotRIn : 24|8@1+ (0.02,0) [0|4] "bar" Vector__XXX
+ SG_ ABX_CS_T_RadIn : 52|10@1+ (0.1,0) [0|102.3] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_T_MotIn : 42|10@1+ (0.1,0) [0|102.3] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_T_InvIn : 32|10@1+ (0.1,0) [0|102.3] "ï¿½C" Vector__XXX
+ SG_ ABX_CS_P_RadIn : 16|8@1+ (0.02,0) [0|4] "bar" Vector__XXX
+ SG_ ABX_CS_P_MotLIn : 8|8@1+ (0.02,0) [0|4] "bar" Vector__XXX
+ SG_ ABX_CS_P_InvIn : 0|8@1+ (0.02,0) [0|4] "bar" Vector__XXX
+
+BO_ 261 ABX_BrakeT: 8 ABX
+ SG_ ABX_BrakeT_RR : 48|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+ SG_ ABX_BrakeT_RL : 32|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+ SG_ ABX_BrakeT_FR : 16|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+ SG_ ABX_BrakeT_FL : 0|16@1+ (0.01,0) [0|655.35] "ï¿½C" Vector__XXX
+
+BO_ 260 ABX_Wheelspeed: 8 ABX
+ SG_ ABX_Wheelspeed_RR : 48|16@1- (0.001,0) [-32.768|32.767] "1/s" Vector__XXX
+ SG_ ABX_Wheelspeed_RL : 32|16@1- (0.001,0) [-32.768|32.767] "1/s" Vector__XXX
+ SG_ ABX_Wheelspeed_FR : 16|16@1- (0.001,0) [-32.768|32.767] "1/s" Vector__XXX
+ SG_ ABX_Wheelspeed_FL : 0|16@1- (0.001,0) [-32.768|32.767] "1/s" Vector__XXX
+
+BO_ 259 ABX_Dampers: 8 ABX
+ SG_ ABX_DamperRoll_R : 48|16@1+ (0.01,0) [0|75] "mm" Vector__XXX
+ SG_ ABX_DamperRoll_F : 16|16@1+ (0.01,0) [0|75] "mm" Vector__XXX
+ SG_ ABX_DamperHeave_R : 32|16@1+ (0.01,0) [0|75] "mm" Vector__XXX
+ SG_ ABX_DamperHeave_F : 0|16@1+ (0.01,0) [0|75] "mm" Vector__XXX
+
+BO_ 258 ABX_Timings: 8 ABX
+ SG_ ABX_Sectortime_last : 48|16@1+ (0.01,0) [0|655.35] "s" Vector__XXX
+ SG_ ABX_Sectortime_best : 32|16@1+ (0.01,0) [0|655.35] "s" Vector__XXX
+ SG_ ABX_Laptime_last : 16|16@1+ (0.01,0) [0|655.35] "s" Vector__XXX
+ SG_ ABX_Laptime_best : 0|16@1+ (0.01,0) [0|655.35] "s" Vector__XXX
+
+BO_ 257 ABX_Driver: 8 ABX
+ SG_ ABX_Sectorcounter : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ABX_Lapcounter : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ABX_Steering_Angle : 32|8@1- (1,0) [-128|127] "ï¿½" Vector__XXX
+ SG_ ABX_Speed : 40|8@1+ (0.2,0) [0|51] "m/s" Vector__XXX
+ SG_ ABX_BrakeP_R : 20|12@1+ (0.1,0) [0|160] "bar" Vector__XXX
+ SG_ ABX_BrakeP_F : 8|12@1+ (0.1,0) [0|160] "bar" Vector__XXX
+ SG_ ABX_APPS_percent : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1792 TTS_Config: 1 ABX
+ SG_ TTS_NewID : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1796 TTS_RR: 8 TTS_RR
+ SG_ TTS_RR_Outer : 48|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RR_Inner : 0|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RR_CenterOut : 36|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RR_CenterIn : 12|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RR_Center : 24|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+
+BO_ 1795 TTS_RL: 8 TTS_RL
+ SG_ TTS_RL_Outer : 0|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RL_Inner : 48|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RL_CenterIn : 36|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RL_CenterOut : 12|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_RL_Center : 24|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+
+BO_ 1794 TTS_FR: 8 TTS_FR
+ SG_ TTS_FR_Outer : 48|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FR_Inner : 0|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FR_CenterIn : 12|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FR_CenterOut : 36|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FR_Center : 24|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+
+BO_ 1793 TTS_FL: 8 TTS_FL
+ SG_ TTS_FL_Outer : 0|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FL_Inner : 48|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FL_CenterIn : 36|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FL_CenterOut : 12|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+ SG_ TTS_FL_Center : 24|12@1- (0.1,150) [-54.8|354.7] "ï¿½C" Vector__XXX
+
+BO_ 1026 STW_Param_Set: 5 STW
+ SG_ STW_Param_BBal m0 : 15|32@0+ (0.1,0) [0|0] "" Vector__XXX
+ SG_ STW_Param_Type M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ STW_Param_SLIPREF m1 : 15|32@0+ (0.01,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_ASRP m3 : 15|32@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_ASRON m4 : 15|32@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_ASRI m5 : 15|32@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_EnduPowerLimit m6 : 15|32@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_Test3 m7 : 15|32@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_Test4 m8 : 15|32@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ STW_Param_MUMAX m2 : 15|32@0+ (0.1,0) [0|1] "" Vector__XXX
+
+BO_ 128 AMS_Slave0Status: 8 AMS
+ SG_ AMS_SlaveStatus_ID : 6|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMS_SlaveStatus_Error : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS_SlaveStatus_SoC : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ AMS_SlaveStatus_MinCellVolt : 23|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxCellVolt : 39|16@0+ (0.0001,0) [0|1] "V" Vector__XXX
+ SG_ AMS_SlaveStatus_MaxTemp : 51|12@0- (0.0625,0) [0|1] "degC" Vector__XXX
+
+BO_ 1280 SSU_Message: 4 SSU
+ SG_ SSU_AirTemp : 16|16@1- (0.1,0) [-20|80] "ï¿½C" Vector__XXX
+ SG_ SSU_AirPressure : 0|16@1- (1,0) [-1000|1000] "Pa" Vector__XXX
+
+BO_ 10 AMS_Status: 6 AMS
+ SG_ AMS_State : 0|7@1+ (1,0) [0|1] ""  ABX
+ SG_ SDC_Closed : 7|1@1+ (1,0) [0|1] ""  ABX
+ SG_ SOC : 8|8@1+ (1,0) [0|100] "%"  ABX
+ SG_ Min_cell_volt : 23|16@0+ (0.0001,0) [0|5] "V"  ABX
+ SG_ Max_cell_temp : 39|16@0+ (0.0625,0) [0|4095.94] "Â°C"  ABX
+
+BO_ 9 AMS_SlavePanic: 8 AMS
+ SG_ AMS_SlavePanic_Kind : 15|8@0+ (1,0) [0|7.20576E+016] ""  ABX
+ SG_ AMS_SlavePanic_SlaveID : 0|8@1+ (1,0) [0|255] ""  ABX
+ SG_ AMS_SlavePanic_Arg : 23|32@0+ (1,0) [0|7.20576E+016] ""  ABX
+
+BO_ 11 AMS_In: 1 ABX
+ SG_ TS_activate : 0|1@1+ (1,0) [0|1] ""  AMS
+ SG_ Lap_Number : 2|6@1+ (1,0) [0|64] "Laps"  AMS
+ SG_ Inverters_discharged : 1|1@1+ (1,0) [0|1] ""  AMS
+
+BO_ 1313 Shunt_Current: 6 Shunt
+ SG_ Shunt_Current : 23|32@0- (0.001,0) [-2000000|2000000] "A"  AMS
+
+BO_ 1314 Shunt_Voltage1: 6 Shunt
+ SG_ Shunt_Voltage1 : 23|32@0- (0.001,0) [-2000000|2000000] "V"  AMS
+
+BO_ 1315 Shunt_Voltage2: 6 Shunt
+ SG_ Shunt_Voltage2 : 23|32@0- (0.001,0) [-2000000|2000000] "V"  AMS
+
+BO_ 1316 Shunt_Voltage3: 6 Shunt
+ SG_ Shunt_Voltage3 : 23|32@0- (0.001,0) [-2000000|2000000] "V"  AMS
+
+BO_ 1317 Shunt_Temperature: 6 Shunt
+ SG_ Shunt_Temperature : 23|32@0+ (0.1,0) [0|1000] "Â°C"  ABX
+
+BO_ 16 SDCL_tx: 4 SDCL
+ SG_ asms_state : 0|1@1+ (1,0) [0|1] ""  ABX
+ SG_ sdc_state_1 : 1|1@1+ (1,0) [0|1] ""  ABX
+ SG_ sdc_state_2 : 2|1@1+ (1,0) [0|1] ""  ABX
+ SG_ sdc_state_3 : 3|1@1+ (1,0) [0|1] ""  ABX
+ SG_ heartbeat_ok : 4|1@1+ (1,0) [0|1] ""  ABX
+ SG_ sdcl_sdc_ready : 5|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ts_start_muxed : 6|1@1+ (1,0) [0|1] ""  ABX
+ SG_ latch_init_open : 8|1@1+ (1,0) [0|1] ""  ABX
+ SG_ latch_closed : 9|1@1+ (1,0) [0|1] ""  ABX
+ SG_ latch_reopened : 10|1@1+ (1,0) [0|1] ""  ABX
+ SG_ as_mission : 11|3@1+ (1,0) [0|7] ""  ABX
+
+BO_ 15 SDCL_rx: 3 ABX
+ SG_ as_close_sdc : 0|1@1+ (1,0) [0|1] ""  SDCL
+ SG_ sdcl_heartbeat : 1|1@1+ (1,0) [0|1] ""  SDCL
+ SG_ asb_error : 2|1@1+ (1,0) [0|1] ""  SDCL
+ SG_ as_mission : 4|3@1+ (1,0) [0|7] ""  SDCL
+
+BO_ 200 PDU_Command: 6 ABX
+ SG_ PDU_led3_rx : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDU_led2_rx : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDU_led1_rx : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDU_servo_rx : 1|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_misc_rx : 2|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_alwayson_rx : 3|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_shutdown_circuit_rx : 4|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_ebs_valve_2_rx : 5|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_mode_valve_2_rx : 6|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_inverter_rx : 7|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_mode_valve_1_rx : 8|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_steering_rx : 9|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_ebs_valve_1_rx : 10|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_service_brake_rx : 11|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_sensorbox_rx : 12|1@0+ (1,0) [0|1] ""  PDU
+ SG_ PDU_PWM_fans_rx : 23|8@0+ (1,0) [0|255] ""  PDU
+ SG_ PDU_PWM_aggregat_rx : 31|8@0+ (1,0) [0|255] ""  PDU
+ SG_ PDU_PWM_pump_rx : 39|8@0+ (1,0) [0|255] ""  PDU
+ SG_ PDU_checksum_rx : 47|8@0+ (1,0) [0|255] ""  PDU
+
+BO_ 201 PDU_Response: 6 PDU
+ SG_ PDU_led3_tx : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDU_led2_tx : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDU_led1_tx : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDU_servo_tx : 1|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_misc_tx : 2|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_alwayson_tx : 3|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_shutdown_circuit_tx : 4|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_evs_valve_2_tx : 5|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_mode_valve_2_tx : 6|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_inverter_tx : 7|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_mode_valve_1_tx : 8|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_steering_tx : 9|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_ebs_valve_1_tx : 10|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_service_brake_tx : 11|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_sensorbox_tx : 12|1@0+ (1,0) [0|1] ""  ABX
+ SG_ PDU_PWM_fans_tx : 23|8@0+ (1,0) [0|255] ""  ABX
+ SG_ PDU_PWM_aggregat : 31|8@0+ (1,0) [0|255] ""  ABX
+ SG_ PDU_PWM_pump : 39|8@0+ (1,0) [0|255] ""  ABX
+ SG_ PDU_checksum_tx : 47|8@0+ (1,0) [0|255] ""  ABX
+
+BO_ 514 TxPDO: 6 ABX
+ SG_ pdm_output2_shortcircuit : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_output1_shortcircuit : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_output2_cablebreak : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_output1_cablebreak : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_output2_controllerrange : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_output1_controllerrange : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_temperature_shutdown : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_temperature_warning : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_analoginput_currentoverload : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_analoginput_shortcircuit : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_analoginput_cablebreak : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_analoginput_middleposition : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_canbus_statewarning : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_canbus_startupmissing : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_canbus_timeout : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pdm_powersupply_greater_32v : 2|1@1+ (1,0) [0|1] ""  ABX
+ SG_ pdm_powersupply_less_8v : 1|1@1+ (1,0) [0|1] ""  ABX
+ SG_ PDM_analoginput : 32|16@1+ (1,0) [0|65535] "%."  ABX
+
+BO_ 1 XSens_Error: 1 XSens
+
+BO_ 2 XSens_Warning: 1 XSens
+ SG_ WarningCode : 7|8@0+ (1,0) [0|0] ""  ABX
+
+BO_ 5 XSens_SampleTime: 4 XSens
+ SG_ Timestamp : 7|32@0+ (1,0) [0|0] "us"  ABX
+
+BO_ 6 XSens_GroupCounter: 2 XSens
+ SG_ Counter : 7|16@0+ (1,0) [0|0] ""  ABX
+
+BO_ 17 XSens_StatusWord: 4 XSens
+ SG_ SelfTestOk : 24|1@1+ (1,0) [0|1] ""  ABX
+ SG_ OrientationValid : 25|1@1+ (1,0) [0|1] ""  ABX
+ SG_ GpsValid : 26|1@1+ (1,0) [0|1] ""  ABX
+ SG_ NoRotation : 28|2@0+ (1,0) [0|3] ""  ABX
+ SG_ RepresentativeMotion : 29|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ExternalClockSynced : 30|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipAccX : 16|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipAccY : 17|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipAccZ : 18|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipGyrX : 19|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipGyrY : 20|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipGyrZ : 21|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipMagX : 22|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipMagY : 23|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClipMagZ : 8|1@1+ (1,0) [0|1] ""  ABX
+ SG_ Retransmitted : 10|1@1+ (1,0) [0|1] ""  ABX
+ SG_ ClippingDetected : 11|1@1+ (1,0) [0|1] ""  ABX
+ SG_ Interpolated : 12|1@1+ (1,0) [0|1] ""  ABX
+ SG_ SyncIn : 13|1@1+ (1,0) [0|1] ""  ABX
+ SG_ SyncOut : 14|1@1+ (1,0) [0|1] ""  ABX
+ SG_ FilterMode : 1|3@0+ (1,0) [0|1] ""  ABX
+ SG_ HaveGnssTimePulse : 2|1@1+ (1,0) [0|1] ""  ABX
+ SG_ RtkStatus : 4|2@0+ (1,0) [0|1] ""  ABX
+
+BO_ 50 XSens_RateOfTurn: 6 XSens
+ SG_ XSens_gyrX : 7|16@0- (0.00195313,0) [-35|35] "rad/s"  ABX
+ SG_ XSens_gyrY : 23|16@0- (0.00195313,0) [-35|35] "rad/s"  ABX
+ SG_ XSens_gyrZ : 39|16@0- (0.00195313,0) [-35|35] "rad/s"  ABX
+
+BO_ 52 XSens_Acceleration: 6 XSens
+ SG_ XSens_accX : 7|16@0- (0.00390625,0) [-100|100] "m/s²"  ABX
+ SG_ XSens_accY : 23|16@0- (0.00390625,0) [-100|100] "m/s²"  ABX
+ SG_ XSens_accZ : 39|16@0- (0.00390625,0) [-100|100] "m/s²"  ABX
+
+BO_ 113 XSens_LongLat: 8 XSens
+ SG_ latitude : 7|32@0- (5.96046E-008,0) [-90|90] "deg"  ABX
+ SG_ longitude : 39|32@0- (1.19209E-007,0) [-180|180] "deg"  ABX
+
+BO_ 118 XSens_Velocity: 6 XSens
+ SG_ velX : 7|16@0- (0.015625,0) [-500|500] "m/s"  ABX
+ SG_ velY : 23|16@0- (0.015625,0) [-500|500] "m/s"  ABX
+ SG_ velZ : 39|16@0- (0.015625,0) [-500|500] "m/s"  ABX
+
+BO_ 1040 AS_Mission_fb: 1 ABX
+ SG_ Mission_selection : 0|3@1+ (1,0) [1|7] ""  STW
+
+BO_ 1024 STW_mission_selected: 1 STW
+ SG_ Mission_selection : 0|3@1+ (1,0) [1|7] ""  ABX
+
+BO_ 801 EPSC_out: 8 EPSC
+ SG_ EPSC_measured_steering_angle : 7|16@0- (7.20721E-005,0) [-13875|13875] "part of full steering"  ABX
+ SG_ EPSC_measured_rpm : 39|12@0- (0.1,0) [-204.8|204.7] "rpm"  ABX
+ SG_ EPSC_measured_current : 23|8@0+ (0.1,0) [0|25.5] "A"  ABX
+ SG_ EPSC_measured_voltage : 31|8@0+ (0.1,0) [0|20] "V"  ABX
+ SG_ EPSC_measured_temperature : 43|10@0+ (0.1,0) [0|102.3] "Â°C"  ABX
+ SG_ EPSC_measured_internal_temp : 49|10@0+ (0.1,0) [0|102.3] "Â°C"  ABX
+
+BO_ 291 EPSC_Steering_In: 2 ABX
+ SG_ EPSC_desired_steering_angle : 7|16@0- (0.0001,0) [-10000|10000] ""  EPSC
+
+BO_ 1025 STW_buttons: 1 STW
+ SG_ STW_button_left : 0|1@1+ (1,0) [0|1] ""  ABX
+ SG_ STW_button_right : 1|1@1+ (1,0) [0|1] ""  ABX
+ SG_ STW_button_R2D : 2|1@1+ (1,0) [0|1] ""  ABX
+ SG_ STW_button_Enter : 3|1@1+ (1,0) [0|1] ""  ABX
+
+BO_ 1042 STW_status: 6 ABX
+ SG_ InvL_ready : 8|1@1+ (1,0) [0|0] ""  STW
+ SG_ iniChk_state : 24|8@1+ (1,0) [0|255] ""  STW
+ SG_ InvR_ready : 9|1@1+ (1,0) [0|0] ""  STW
+ SG_ AS_State_STW : 0|3@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ SDC_BFL : 10|1@1+ (1,0) [0|0] ""  STW
+ SG_ SDC_BRL : 11|1@1+ (1,0) [0|0] ""  STW
+ SG_ SDC_ACC : 12|1@1+ (1,0) [0|0] ""  STW
+ SG_ SDC_HVB : 13|1@1+ (1,0) [0|0] ""  STW
+ SG_ Lap_Count : 16|6@1+ (1,0) [0|64] ""  STW
+ SG_ ERR_SDC : 32|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_AMS : 33|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_InvL : 43|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_InvR : 44|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_IniChk : 35|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_ConMon : 36|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_SCS : 37|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_sBSPD : 38|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_APPSp : 39|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_AS : 40|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_ROS : 41|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_RES : 42|1@1+ (1,0) [0|1] ""  STW
+ SG_ ERR_PDU : 34|1@1+ (1,0) [0|1] ""  STW
+ SG_ R2D_Progress : 4|4@1+ (1,0) [0|15] ""  STW
+
+BO_ 202 PDU_Current_1: 8 PDU
+ SG_ PDU_alwayson_curr : 7|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_misc_curr : 23|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_inverter_curr : 39|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_shutdown_circuit_curr : 55|16@0+ (1,0) [0|65535] ""  ABX
+
+BO_ 203 PDU_Current_2: 8 PDU
+ SG_ PDU_fans_curr : 7|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_pump_curr : 23|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_aggregat_curr : 39|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_steering_curr : 55|16@0+ (1,0) [0|65535] ""  ABX
+
+BO_ 204 PDU_Current_3: 8 PDU
+ SG_ PDU_ebs_valve_1_curr : 7|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_ebs_valve_2_curr : 23|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_mode_valve_1_curr : 39|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_mode_valve_2_curr : 55|16@0+ (1,0) [0|65535] ""  ABX
+
+BO_ 205 PDU_Current_4: 8 PDU
+ SG_ PDU_sensorbox_curr : 7|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_service_brake_curr : 23|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_servos_curr : 39|16@0+ (1,0) [0|65535] ""  ABX
+ SG_ PDU_shutdown_circuit_curr : 55|16@0+ (1,0) [0|65535] ""  ABX
+
+BO_ 292 EPSC_Config_In: 7 ABX
+ SG_ EPSC_Ki_curr m1 : 55|8@0+ (0.1,0) [0|25.6] "" Vector__XXX
+ SG_ EPSC_Kp_curr m1 : 47|8@0+ (0.1,0) [0|25.6] "" Vector__XXX
+ SG_ EPSC_Ki_rpm m1 : 39|8@0+ (0.1,0) [0|25.6] "" Vector__XXX
+ SG_ EPSC_Kp_rpm m1 : 31|8@0+ (0.1,0) [0|25.6] "" Vector__XXX
+ SG_ EPSC_Ki_pos m1 : 23|8@0+ (0.1,0) [0|25.6] "" Vector__XXX
+ SG_ EPSC_Kp_pos m1 : 15|8@0+ (0.1,0) [0|25.6] "" Vector__XXX
+ SG_ EPSC_should_calibrate : 7|1@0- (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_should_change_mode M : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_mode m1 : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_flag3 : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_flag4 : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_flag5 : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_flag6 : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSC_flag7 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BU_ XSens "Generic Xsens Motion Sensor";
+CM_ BO_ 225 "Cycle Time: 100ms";
+CM_ BO_ 224 "Cycle Time: 50ms";
+CM_ SG_ 224 Jetson_AS_Mission "AS Mission Selection";
+CM_ BO_ 265 "Cycle time: 1s";
+CM_ BO_ 264 "Cycle time: 100ms";
+CM_ BO_ 262 "Cycle time: 100ms";
+CM_ BO_ 263 "Cycle time: 100ms";
+CM_ BO_ 261 "Cycle time: 100ms";
+CM_ BO_ 260 "Cycle time: 10ms";
+CM_ BO_ 259 "Cycle time: 10ms";
+CM_ BO_ 258 "Cycle time: 1s";
+CM_ BO_ 257 "Cycle time: 10ms";
+CM_ BO_ 1792 "Sent only if TTS positions swapped";
+CM_ SG_ 17 SelfTestOk "Set when the self test result was ok";
+CM_ SG_ 17 OrientationValid "Set when the computed orientation is valid. The orientation may be invalid during startup or when the XSens data is clipping during violent (for the device) motion";
+CM_ SG_ 17 GpsValid "Set when the device has a GPS receiver and the receiver says that there is a GPS position fix.";
+CM_ SG_ 17 RepresentativeMotion "Indicates if the In-Run Compass Calibration is doing the representative motion analysis";
+CM_ SG_ 17 ExternalClockSynced "Indicates whether the internal clock is synced with an external clock (Either GNNS or custom provided clock sync)";
+CM_ SG_ 17 ClipAccX "Indicates if there was clipping on the X-axis of the accelerometer";
+CM_ SG_ 17 ClipAccY "Indicates if there was clipping on the Y-axis of the accelerometer";
+CM_ SG_ 17 ClipAccZ "Indicates if there was clipping on the Z-axis of the accelerometer";
+CM_ SG_ 17 ClipGyrX "Indicates if there was clipping on the X-axis of the gyroscope";
+CM_ SG_ 17 ClipGyrY "Indicates if there was clipping on the Y-axis of the gyroscope";
+CM_ SG_ 17 ClipGyrZ "Indicates if there was clipping on the Z-axis of the gyroscope";
+CM_ SG_ 17 ClipMagX "Indicates if there was clipping on the X-axis of the magnetometer";
+CM_ SG_ 17 ClipMagY "Indicates if there was clipping on the Y-axis of the magnetometer";
+CM_ SG_ 17 ClipMagZ "Indicates if there was clipping on the Z-axis of the magnetometer";
+CM_ SG_ 17 Retransmitted "When set Indicates the sample was received as a retransmission";
+CM_ SG_ 17 ClippingDetected "When set Indicates clipping has occurred";
+CM_ SG_ 17 Interpolated "When set Indicates the sample is an interpolation between other samples";
+CM_ SG_ 17 SyncIn "When set indicates a sync-in event has been triggered";
+CM_ SG_ 17 SyncOut "When set Indicates a sync-out event has been generated";
+CM_ SG_ 17 FilterMode "Mask for the 3 bit filter mode field";
+CM_ SG_ 17 HaveGnssTimePulse "Indicates that the 1PPS GNSS time pulse is present";
+CM_ SG_ 17 RtkStatus "Mask for 2 bit RTK status field";
+CM_ SG_ 801 EPSC_measured_steering_angle "+-13875 equals to +-1.0, so the factor is 1/13875";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+VAL_ 12 AMS_Error_Kind 5 "Shunt Overtemperature" 4 "Shunt Overcurrent" 3 "Shunt Timeout" 2 "Slave Panic" 1 "Slave Timeout" 0 "None" ;
+VAL_ 1026 STW_Param_Type 0 "BrakeBalance" 1 "TractionControl1" 2 "TractionControl2" 3 "TorqueMap" 4 "Test1" 5 "Test2" 6 "Test3" 7 "Test4" ;
+VAL_ 1026 STW_Param_ASRON 0 "OFF" 1 "ON" ;
+VAL_ 10 AMS_State 0 "TS_INACTIVE" 1 "TS_ACTIVE" 2 "TS_PRECHARGE" 3 "TS_DISCHARGE" 4 "TS_ERROR" ;
+VAL_ 9 AMS_SlavePanic_Kind 0 "Overtemperature" 1 "Undertemperature" 2 "Overvoltage" 3 "Undervoltage" 4 "Too_few_working_temperature_sensors" 5 "Open_cell_connection" ;
+VAL_ 17 SelfTestOk 0 "false" 1 "true" ;
+VAL_ 17 OrientationValid 0 "false" 1 "true" ;
+VAL_ 17 GpsValid 0 "false" 1 "true" ;
+VAL_ 17 NoRotation 1 "Aborted" 2 "SamplesRejected" 3 "RunningNormally" ;
+VAL_ 17 RepresentativeMotion 0 "false" 1 "true" ;
+VAL_ 17 ExternalClockSynced 0 "false" 1 "true" ;
+VAL_ 17 ClipAccX 0 "false" 1 "true" ;
+VAL_ 17 ClipAccY 0 "false" 1 "true" ;
+VAL_ 17 ClipAccZ 0 "false" 1 "true" ;
+VAL_ 17 ClipGyrX 0 "false" 1 "true" ;
+VAL_ 17 ClipGyrY 0 "false" 1 "true" ;
+VAL_ 17 ClipGyrZ 0 "false" 1 "true" ;
+VAL_ 17 ClipMagX 0 "false" 1 "true" ;
+VAL_ 17 ClipMagY 0 "false" 1 "true" ;
+VAL_ 17 ClipMagZ 0 "false" 1 "true" ;
+VAL_ 17 Retransmitted 0 "false" 1 "true" ;
+VAL_ 17 ClippingDetected 0 "false" 1 "true" ;
+VAL_ 17 Interpolated 0 "false" 1 "true" ;
+VAL_ 17 SyncIn 0 "false" 1 "true" ;
+VAL_ 17 SyncOut 0 "false" 1 "true" ;
+VAL_ 17 FilterMode 0 "false" 1 "true" ;
+VAL_ 17 HaveGnssTimePulse 0 "false" 1 "true" ;
+VAL_ 17 RtkStatus 0 "No RTK" 1 "RTK floating" 2 "RTK fixed" ;
+VAL_ 1040 Mission_selection 1 "MissionSelection_acceleration" 2 "MissionSelection_skidpad" 3 "MissionSelection_trackdrive" 4 "MissionSelection_braketest" 5 "MissionSelection_inspection" 6 "MissionSelection_autocross" 7 "MissionSelection_manual" ;
+VAL_ 1024 Mission_selection 1 "MissionSelection_acceleration" 2 "MissionSelection_skidpad" 3 "MissionSelection_trackdrive" 4 "MissionSelection_braketest" 5 "MissionSelection_inspection" 6 "MissionSelection_autocross" 7 "MissionSelection_manual" ;
+VAL_ 1042 iniChk_state 0 "Start" 1 "WD_Check" 2 "WD_OK" 3 "ASB_Check_1" 4 "ASB_Check_2" 5 "Wait_TS" 6 "EBS_Check_A" 7 "EBS_Check_B" 8 "Done" 9 "Error" ;
+VAL_ 1042 AS_State_STW 0 "AS_Off" 1 "AS_Manual" 2 "AS_Ready" 3 "AS_Driving" 4 "AS_Finished" 5 "AS_Emergency" ;
+VAL_ 1042 R2D_Progress 0 "R2D_None" 1 "R2D_TSMS" 2 "R2D_TSActive" 3 "R2D_Resetting_Nodes" 4 "R2D_Resetting_Comms" 5 "R2D_Waiting_Init" 6 "R2D_Init_Stage1" 7 "R2D_Init_Stage2" 15 "R2D_Init_Success" ;
+
