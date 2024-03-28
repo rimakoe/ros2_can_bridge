@@ -1,0 +1,3 @@
+[submodule "src/cantools"]
+	path = src/cantools
+	url = git@github.com:rimakoe/cantools.git
