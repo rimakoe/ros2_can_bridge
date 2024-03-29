@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/ros/iron/include/**",
+                "${workspaceFolder}/ros2_ws/src/ros2_can_utils/can_interface/include/**",
+                "${workspaceFolder}/ros2_ws/src/ros2_can_utils/can_transciever/include/**",
+                "${workspaceFolder}/ros2_ws/install/can_msgs/include/can_msgs/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
