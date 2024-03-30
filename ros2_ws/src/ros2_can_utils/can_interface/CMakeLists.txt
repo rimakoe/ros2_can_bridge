@@ -53,10 +53,8 @@ install(
 install(
   TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
   INCLUDES DESTINATION include
 )
-ament_export_include_directories("include/${PROJECT_NAME}" "include/dbc")
+ament_export_include_directories(include)
 ament_package()
