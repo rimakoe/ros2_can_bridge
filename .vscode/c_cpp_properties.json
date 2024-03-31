@@ -6,8 +6,10 @@
                 "${workspaceFolder}/**",
                 "/opt/ros/iron/include/**",
                 "${workspaceFolder}/ros2_ws/src/ros2_can_utils/can_interface/include/**",
+                "${workspaceFolder}/ros2_ws/src/ros2_can_utils/can_bridge/include/**",
+                "${workspaceFolder}/ros2_ws/install/can_msgs/include/can_msgs/**",
                 "${workspaceFolder}/ros2_ws/src/ros2_can_utils/can_transciever/include/**",
-                "${workspaceFolder}/ros2_ws/install/can_msgs/include/can_msgs/**"
+                "/opt/ros/iron/include/rclcpp"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

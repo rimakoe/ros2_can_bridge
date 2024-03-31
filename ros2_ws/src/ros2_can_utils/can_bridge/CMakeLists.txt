@@ -1,27 +1,28 @@
 cmake_minimum_required(VERSION 3.8)
-project(can_transciever)
+project(can_bridge)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(can_msgs REQUIRED)
-find_package(can_interface REQUIRED)
 
-include_directories(include ${can_msgs_INCLUDE_DIRS} ${can_interface_INCLUDE_DIRS})
-add_executable(${PROJECT_NAME} src/transciever.cpp include/${PROJECT_NAME}/endec.hpp)
-target_link_libraries(${PROJECT_NAME} ${rclcpp_LIBRARIES} ${can_msgs_LIBRARIES} ${can_interface_LIBRARIES})
-ament_target_dependencies(${PROJECT_NAME} rclcpp can_msgs can_interface)
+add_executable(${PROJECT_NAME} src/bridge.cpp)
 
-ament_export_dependencies(can_msgs can_interface rclcpp)
-ament_export_include_directories(include)
+include_directories(include ${rclcpp_INCLUDE_DIRS} ${can_msgs_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${rclcpp_LIBRARIES} ${can_msgs_LIBRARIES})
+ament_target_dependencies(${PROJECT_NAME} rclcpp can_msgs)
 
 install(
   DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY include/${PROJECT_NAME}
+  DESTINATION include
 )
 
 install(

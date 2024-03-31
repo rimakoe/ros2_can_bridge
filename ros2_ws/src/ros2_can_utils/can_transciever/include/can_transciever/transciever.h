@@ -1,38 +1,36 @@
+#ifndef _CAN_TRANSCIEVER_H_
+#define _CAN_TRANSCIEVER_H_
 
-#ifndef ROS2_TO_CAN_CONVERTER_H
-#define ROS2_TO_CAN_CONVERTER_H
-
-// #include <rclcpp_lifecycle/lifecycle_node.hpp>
-#include <rclcpp/logger.hpp>
-#include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
-#include <chrono>
-#include <functional>
-#include <memory>
-#include <string>
 #include <can_msgs/messages.h>
+#include "endec.hpp"
 
-// using CR = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
-// using State = rclcpp_lifecycle::State;
+namespace ros2can{
+    class Transciever : public rclcpp::Node
+    {
+    public:
+        Transciever();
+        ~Transciever();
+    private:
+        // functions
+        void transmit(const frame::decoded::can1::jetson_commands_t frame_decoded);
+        
+        // publisher
+        rclcpp::Publisher<can_msgs::msg::JetsonCommandsStamped>::SharedPtr publisher_can1_jetson_commands_stamped;
+        
+        // subscriber
+        rclcpp::Subscription<can_msgs::msg::JetsonCommandsStamped>::SharedPtr subscription_can1_jetson_commands_stamped;
+        
+        // data structures
+        struct received_data_t{
+            struct can1_t
+            {
+                frame::decoded::can1::jetson_commands_t jetson_commands;
+            } can1;
+        } received_data;
 
-class Transciever : public rclcpp::Node
-{
-public:
-    Transciever();
-    ~Transciever();
+        rclcpp::TimerBase::SharedPtr timer_;
+    };
+}
 
-private:
-    void timer_callback();
-    rclcpp::Publisher<can_msgs::msg::AbxBrakeTStamped>::SharedPtr publisher_abx_brake_t;
-    rclcpp::TimerBase::SharedPtr timer_;
-    // CR on_create(const State & previous_state);
-    // CR on_configure(const State & previous_state);
-    // CR on_cleanup(const State & previous_state);
-    // CR on_activate(const State & previous_state);
-    // CR on_deactivate(const State & previous_state);
-    // CR on_on_error(const State & previous_state);
-    // CR on_shutdown(const State & previous_state);
-
-};
-
-#endif  // ROS2_TO_CAN_CONVERTER_H
+#endif // _CAN_TRANSCIEVER_H_
