@@ -11,10 +11,11 @@ namespace ros2can{
     public:
         Transciever();
         ~Transciever();
-    private:
+    
         // functions
-        void transmit(const frame::decoded::can1::jetson_commands_t frame_decoded);
-        
+        virtual void transmit(const frame::decoded::can1::jetson_commands_t frame_decoded);
+    
+    private:        
         // publisher
         rclcpp::Publisher<can_msgs::msg::JetsonCommandsStamped>::SharedPtr publisher_can1_jetson_commands_stamped;
         
@@ -28,8 +29,6 @@ namespace ros2can{
                 frame::decoded::can1::jetson_commands_t jetson_commands;
             } can1;
         } received_data;
-
-        rclcpp::TimerBase::SharedPtr timer_;
     };
 }
 

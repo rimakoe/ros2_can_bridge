@@ -1,14 +1,6 @@
 #include "can_transciever/transciever.h"
 
-
-#include <chrono>
-#include <functional>
-#include <memory>
-#include <string>
-using std::placeholders::_1;
-using namespace std::chrono_literals;
-
-ros2can::Transciever::Transciever(): rclcpp::Node("Transciever") 
+extern "C" ros2can::Transciever::Transciever(): rclcpp::Node("Transciever") 
 {
     publisher_can1_jetson_commands_stamped = this->create_publisher<can_msgs::msg::JetsonCommandsStamped>("/can1/JetsonCommandsStamped", 10);
     this->create_subscription<can_msgs::msg::JetsonCommandsStamped>(
@@ -18,18 +10,13 @@ ros2can::Transciever::Transciever(): rclcpp::Node("Transciever")
             received_data.can1.jetson_commands = decode::can1::jetson_commands(pMessage->data);
         }
     );
-
-    timer_ = this->create_wall_timer(
-      500ms, [this]() -> void {
-        transmit(frame::decoded::can1::jetson_commands_t(0.1, 0.2, 0.3, 0.4, 0.5));
-    });
 }
 
-ros2can::Transciever::~Transciever() 
+extern "C" ros2can::Transciever::~Transciever() 
 {
 }
 
-void ros2can::Transciever::transmit(const frame::decoded::can1::jetson_commands_t frame_decoded)
+extern "C" void ros2can::Transciever::transmit(const frame::decoded::can1::jetson_commands_t frame_decoded)
 {
     can_msgs::msg::JetsonCommandsStamped message;
 
