@@ -1,0 +1,9 @@
+launch:
+  - node:
+      pkg: "can_bridge"
+      exec: "can_bridge"
+      name: "can_bridge"
+  - node:
+      pkg: "test_node"
+      exec: "test_node"
+      name: "test_node"

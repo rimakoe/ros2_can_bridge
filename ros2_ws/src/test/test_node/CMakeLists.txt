@@ -16,10 +16,10 @@ add_executable(${PROJECT_NAME} src/test_node.cpp)
 target_link_libraries(${PROJECT_NAME} ${rclcpp_LIBRARIES} ${can_msgs_LIBRARIES} ${can_transciever_LIBRARIES})
 ament_target_dependencies(${PROJECT_NAME} rclcpp can_msgs can_transciever)
 
-# install(
-#   DIRECTORY launch
-#   DESTINATION share/${PROJECT_NAME}
-# )
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 install(
   DIRECTORY include/${PROJECT_NAME}
