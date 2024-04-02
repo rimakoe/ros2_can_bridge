@@ -1,0 +1,5 @@
+launch:
+  - node:
+      pkg: "test_node_canlib"
+      exec: "test_node_canlib"
+      name: "test_node_canlib"
